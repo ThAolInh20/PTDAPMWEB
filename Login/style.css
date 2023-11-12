@@ -1,0 +1,21 @@
+#dangnhap{
+    width: 250px;
+    border: 1px solid black;
+    
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+form{
+    text-align: left;
+    width: 100%;
+}
+form table{
+    width: 70%;
+}
+
+input{
+    width: 100%;
+}
