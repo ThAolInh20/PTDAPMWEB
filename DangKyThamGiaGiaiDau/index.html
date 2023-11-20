@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        select, input {
+            margin: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #registrationForm {
+            display: block;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <title>Đăng ký tham gia giải đấu</title>
+</head>
+<body>
+    <h1>Đăng ký tham gia giải đấu</h1>
+
+    <div id="registrationForm">
+        <h2>Đăng ký tham gia giải đấu</h2>
+        <form onsubmit="return registerForTournament()">
+            <label for="teamName">Tên đội:</label>
+            <input type="text" id="teamName" name="teamName" required>
+
+            <label for="tournament">Chọn giải đấu:</label>
+            <select id="tournament" name="tournament" required>
+                <option value="Giải đấu A">Giải đấu A</option>
+                <option value="Giải đấu B">Giải đấu B</option>
+                <!-- Thêm các tùy chọn giải đấu khác vào đây -->
+            </select>
+
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+
+    <script>
+        function registerForTournament() {
+            var teamName = document.getElementById('teamName').value;
+            var selectedTournament = document.getElementById('tournament').value;
+
+            if (teamName && selectedTournament) {
+                alert("Bạn đã đăng ký tham gia giải đấu " + selectedTournament + " với đội " + teamName + " thành công!");
+                // Thêm logic gửi đăng ký đến server (nếu cần)
+                return false; // Ngăn chặn form được gửi đi
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin!");
+                return false; // Ngăn chặn form được gửi đi nếu thiếu thông tin
+            }
+        }
+    </script>
+</body>
+</html>

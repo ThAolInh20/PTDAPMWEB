@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm đội giao lưu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        li {
+            width: 30%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tìm kiếm đội giao lưu</h1>
+    
+    <form action="/search" method="get">
+        <label for="region">Khu vực:</label>
+        <input type="text" id="region" name="region">
+
+        <label for="level">Cấp độ:</label>
+        <input type="text" id="level" name="level">
+
+        <label for="sport">Môn thể thao:</label>
+        <input type="text" id="sport" name="sport">
+
+        <label for="teamName">Tên đội đấu:</label>
+        <input type="text" id="teamName" name="teamName">
+
+        <button type="submit">Tìm kiếm</button>
+    </form>
+
+    <h2>Kết quả tìm kiếm</h2>
+    
+    <ul>
+        <li>
+            <h3>Tên đội: Đội A</h3>
+            <p>Cấp độ: Cao</p>
+            <p>Môn thể thao: Bóng đá</p>
+            <p>Số lượng thành viên: 7</p>
+            <p>Thông tin liên hệ: example@email.com</p>
+            <button onclick="contactTeam('Đội A')">Liên hệ</button>
+        </li>
+        <li>
+            <h3>Tên đội: Đội B</h3>
+            <p>Cấp độ: Cao</p>
+            <p>Môn thể thao: Bóng đá</p>
+            <p>Số lượng thành viên: 7</p>
+            <p>Thông tin liên hệ: example@email.com</p>
+            <button onclick="contactTeam('Đội A')">Liên hệ</button>
+        </li>
+        <li>
+            <h3>Tên đội: Đội C</h3>
+            <p>Cấp độ: Cao</p>
+            <p>Môn thể thao: Bóng đá</p>
+            <p>Số lượng thành viên: 7</p>
+            <p>Thông tin liên hệ: example@email.com</p>
+            <button onclick="contactTeam('Đội A')">Liên hệ</button>
+        </li>
+    </ul>
+
+    <script>
+        function contactTeam(teamName) {
+            alert("Bạn đã chọn liên hệ với đội " + teamName);
+        }
+    </script>
+</body>
+</html>
