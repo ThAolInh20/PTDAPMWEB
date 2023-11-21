@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            width: fit-content;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <title>Quản lý đội giao lưu</title>
+</head>
+<body>
+    <h1>Quản lý đội giao lưu</h1>
+
+    <form action="/create-team" method="">
+        <!-- Form tạo mới đội giao lưu -->
+    </form>
+
+    <h2>Danh sách đội giao lưu</h2>
+    <button onclick="showAddTeamForm()">Thêm đội giao lưu</button>
+
+    <form id="addTeamForm" action="/create-team" method="" style="display: none;">
+        <!-- Form thêm mới đội giao lưu -->
+        <label for="teamName">Tên đội:</label>
+        <input type="text" id="teamName" name="teamName">
+
+        <label for="description">Mô tả:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <label for="region">Khu vực hoạt động:</label>
+        <input type="text" id="region" name="region">
+
+        <label for="contact">Liên hệ:</label>
+        <input type="email" id="contact" name="contact">
+
+        <label for="category">Thể loại:</label>
+        <input type="text" id="category" name="category">
+
+        <button type="button" onclick="saveTeam()">Lưu</button>
+    </form>
+    <ul>
+        <li>
+            <h3>Tên đội: Đội A</h3>
+            <p>Mô tả: Mô tả về đội A.</p>
+            <p>Khu vực hoạt động: Khu vực A</p>
+            <p>Liên hệ: example@email.com</p>
+            <p>Thể loại: Thể loại A</p>
+            <button onclick="editTeam('Đội A')">Chỉnh sửa</button>
+            <button onclick="deleteTeam('Đội A')">Xóa</button>
+        </li>
+        <li>
+            <h3>Tên đội: Đội B</h3>
+            <p>Mô tả: Mô tả về đội B.</p>
+            <p>Khu vực hoạt động: Khu vực B</p>
+            <p>Liên hệ: example@email.com</p>
+            <p>Thể loại: Thể loại B</p>
+            <button onclick="editTeam('Đội B')">Chỉnh sửa</button>
+            <button onclick="deleteTeam('Đội B')">Xóa</button>
+        </li>
+    </ul>
+
+    <script>
+        function editTeam(teamName) {
+            alert("Bạn đã chọn chỉnh sửa đội " + teamName);
+            // Thêm logic chỉnh sửa đội thực tế tại đây (ví dụ: mở form chỉnh sửa)
+        }
+
+        function deleteTeam(teamName) {
+            alert("Bạn đã chọn xóa đội " + teamName);
+            // Thêm logic xóa đội thực tế tại đây (ví dụ: xác nhận xóa, gửi yêu cầu xóa về server, v.v.)
+        }
+
+        function showAddTeamForm() {
+            var form = document.getElementById('addTeamForm');
+            form.style.display = 'block';
+        }
+
+        function saveTeam() {
+            alert("Đội giao lưu đã được lưu!");
+            // Thêm logic lưu đội giao lưu tại đây (nếu cần)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        select, input {
+            margin: 5px;
+        }
+
+        #scheduleForm {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <title>Quản lý lịch thi đấu</title>
+</head>
+<body>
+    <h1>Quản lý lịch thi đấu</h1>
+
+    <button onclick="showScheduleForm('Đội A')">Xem lịch thi đấu</button>
+
+    <div id="scheduleForm">
+        <h2>Lịch thi đấu của Đội A</h2>
+        <ul>
+            <li>
+                <p>Ngày: 01/01/2023</p>
+                <p>Giờ: 14:00</p>
+                <button onclick="requestScheduleChange('Đội A', '01/01/2023', '14:00')">Yêu cầu thay đổi</button>
+            </li>
+            <!-- Thêm các mục lịch thi đấu khác vào đây -->
+        </ul>
+    </div>
+
+    <script>
+        function showScheduleForm(teamName) {
+            document.getElementById('scheduleForm').style.display = 'block';
+            // Thêm logic để hiển thị lịch thi đấu của đội cụ thể
+        }
+
+        function requestScheduleChange(teamName, date, time) {
+            var reason = prompt("Nhập thông tin cần thay đổi cho ngày " + date + " vào lúc " + time + " của đội " + teamName + ":", "");
+
+            if (reason !== null) {
+                if (reason.trim() !== "") {
+                    alert("Yêu cầu thay đổi của bạn đã được ghi nhận. Ban tổ chức sẽ xem xét và thông báo lại cho bạn.");
+                    // Thêm logic gửi yêu cầu thay đổi đến ban tổ chức (nếu cần)
+                } else {
+                    alert("Vui lòng nhập thông tin cần thay đổi!");
+                }
+            } else {
+                alert("Yêu cầu thay đổi của bạn đã bị hủy.");
+            }
+        }
+    </script>
+</body>
+</html>
