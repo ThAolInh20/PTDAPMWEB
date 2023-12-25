@@ -42,3 +42,6 @@ input{
 form #btnlogin button{ 
     align-items: center;
 }
+ #dangki{
+    display: none;
+ }
