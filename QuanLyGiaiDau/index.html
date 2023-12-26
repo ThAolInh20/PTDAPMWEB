@@ -6,10 +6,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #daddce;
+            margin: 0;
+            padding: 0;
         }
 
-        h1, h2 {
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
             text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
         }
 
         ul {
@@ -21,6 +37,9 @@
             border: 1px solid #ccc;
             margin: 10px 0;
             padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         button {
@@ -31,30 +50,43 @@
             text-align: center;
             text-decoration: none;
             cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
 
         select, input {
             margin: 5px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
         #scheduleForm {
-            display: none;
+            display: block;
             position: absolute;
-            top: 30%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #fff;
             padding: 20px;
             border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
     </style>
     <title>Quản lý lịch thi đấu</title>
 </head>
 <body>
-    <h1>Quản lý lịch thi đấu</h1>
-
-    <button onclick="showScheduleForm('Đội A')">Xem lịch thi đấu</button>
-
+    <header>
+        <h1>Quản lý lịch thi đấu</h1>
+    </header>
+    
     <div id="scheduleForm">
         <h2>Lịch thi đấu của Đội A</h2>
         <ul>
@@ -63,16 +95,10 @@
                 <p>Giờ: 14:00</p>
                 <button onclick="requestScheduleChange('Đội A', '01/01/2023', '14:00')">Yêu cầu thay đổi</button>
             </li>
-            <!-- Thêm các mục lịch thi đấu khác vào đây -->
         </ul>
     </div>
 
     <script>
-        function showScheduleForm(teamName) {
-            document.getElementById('scheduleForm').style.display = 'block';
-            // Thêm logic để hiển thị lịch thi đấu của đội cụ thể
-        }
-
         function requestScheduleChange(teamName, date, time) {
             var reason = prompt("Nhập thông tin cần thay đổi cho ngày " + date + " vào lúc " + time + " của đội " + teamName + ":", "");
 
