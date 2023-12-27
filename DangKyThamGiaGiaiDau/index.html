@@ -76,6 +76,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
+        .bg-image {
+            /* The image used */
+            background-image: url("../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg");
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     <title>Đăng ký tham gia giải đấu</title>
 </head>
@@ -83,7 +97,9 @@
     <header>
         <h1>Đăng ký tham gia giải đấu</h1>
     </header>
-
+    <div class="bg-image">
+        <img height="600px" src="../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg"/>
+    </div>
     <div id="registrationForm">
         <h2>Đăng ký tham gia giải đấu</h2>
         <form onsubmit="return registerForTournament()">

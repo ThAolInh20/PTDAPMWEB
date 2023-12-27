@@ -79,6 +79,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
+        .bg-image {
+            /* The image used */
+            background-image: url("../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg");
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     <title>Quản lý lịch thi đấu</title>
 </head>
@@ -86,7 +100,9 @@
     <header>
         <h1>Quản lý lịch thi đấu</h1>
     </header>
-    
+    <div class="bg-image">
+        <img height="600px" src="../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg"/>
+    </div>
     <div id="scheduleForm">
         <h2>Lịch thi đấu của Đội A</h2>
         <ul>
