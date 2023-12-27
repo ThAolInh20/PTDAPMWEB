@@ -4,178 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #daddce;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        form {
-            width: fit-content;
-            margin: auto;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        li {
-            border: 1px solid #ccc;
-            margin: 10px 0;
-            padding: 10px;
-            display: inline-block;
-            box-sizing: border-box;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            /* Ensure content is above the background image */
-            width: 80%;
-            margin: auto;
-        }
-
-        /* Additional styling for overlay content */
-        .container {
-            position: relative;
-            z-index: 1;
-            /* Ensure these elements are above the background image */
-            background-color: rgba(255, 255, 255, 0.8);
-            /* Add a semi-transparent white background for better readability */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: -850px;
-            /* Adjust as needed to position content */
-        }
-
-        .bg-image {
-            /* The image used */
-            background-image: url("../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg");
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
-
-            /* Full height */
-            height: 100%;
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Quản lý đội giao lưu</title>
 </head>
 
 <body>
-    <header>
-        <h1>Quản lý đội giao lưu</h1>
-    </header>
-    <div class="bg-image">
-        <img height="900px" src="../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg" />
+    <div id="NamUI">
+        <header>
+            <div id="logo">
+                <img src="../Picture/image(1280).png" alt="logo">
+            </div>
+            <div id="name">
+                <p>
+                    Sport-Time
+                </p>
+            </div>
+            <div id="log_in_out">
+                <a href="trangchu_chua_login.html">Đăng xuất</a>
+            </div>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="">Sân đấu</a>
+                    <ul id="submenu">
+                        <li><a href="">Tìm sân đấu</a></li>
+                        <li><a href="">Đăng tải sân đấu</a></li>
+                        <li><a href="">Cập nhật sân đấu</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Giải đấu</a>
+                    <ul id="submenu">
+                        <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                        <li><a href="../QuanLyGiaiDau/index.html">Quản lý lịch thi đấu</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="">Đội giao lưu</a>
+                    <ul id="submenu">
+                        <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                        <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Thông tin của bạn</a>
+                    <ul id="submenu">
+                        <li><a href="">Hồ sơ cá nhân</a></li>
+                        <li><a href="">Trao đổi thông tin</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div class="container">
-        <form action="/create-team" method="">
-        </form>
-
-        <h2>Danh sách đội giao lưu</h2>
-        <button onclick="showAddTeamForm()">Thêm đội giao lưu</button>
-
-        <form id="addTeamForm" action="/create-team" method="" style="display: none;">
-            <label for="teamName">Tên đội:</label>
-            <input type="text" id="teamName" name="teamName">
-
-            <label for="description">Mô tả:</label>
-            <textarea id="description" name="description"></textarea>
-
-            <label for="region">Khu vực hoạt động:</label>
-            <input type="text" id="region" name="region">
-
-            <label for="contact">Liên hệ:</label>
-            <input type="email" id="contact" name="contact">
-
-            <label for="category">Thể loại:</label>
-            <input type="text" id="category" name="category">
-
-            <button type="button" onclick="saveTeam()">Lưu</button>
-        </form>
-        <ul>
-            <li>
-                <h3>Tên đội: Đội A</h3>
-                <p>Mô tả: Mô tả về đội A.</p>
-                <p>Khu vực hoạt động: Khu vực A</p>
-                <p>Liên hệ: example@email.com</p>
-                <p>Thể loại: Thể loại A</p>
-                <button onclick="editTeam('Đội A')">Chỉnh sửa</button>
-                <button onclick="deleteTeam('Đội A')">Xóa</button>
-            </li>
-            <li>
-                <h3>Tên đội: Đội B</h3>
-                <p>Mô tả: Mô tả về đội B.</p>
-                <p>Khu vực hoạt động: Khu vực B</p>
-                <p>Liên hệ: example@email.com</p>
-                <p>Thể loại: Thể loại B</p>
-                <button onclick="editTeam('Đội B')">Chỉnh sửa</button>
-                <button onclick="deleteTeam('Đội B')">Xóa</button>
-            </li>
-        </ul>
-    </div>
-
+    <div id="PhuongUI">
+        <header>
+            <h1>Quản lý đội giao lưu</h1>
+        </header>
+        <div class="bg-image">
+            <img height="900px" src="../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg" />
+        </div>
+        <div class="container">
+            <form action="/create-team" method="">
+            </form>
+    
+            <h2>Danh sách đội giao lưu</h2>
+            <button onclick="showAddTeamForm()">Thêm đội giao lưu</button>
+    
+            <form id="addTeamForm" action="/create-team" method="" style="display: none;">
+                <label for="teamName">Tên đội:</label>
+                <input type="text" id="teamName" name="teamName">
+    
+                <label for="description">Mô tả:</label>
+                <textarea id="description" name="description"></textarea>
+    
+                <label for="region">Khu vực hoạt động:</label>
+                <input type="text" id="region" name="region">
+    
+                <label for="contact">Liên hệ:</label>
+                <input type="email" id="contact" name="contact">
+    
+                <label for="category">Thể loại:</label>
+                <input type="text" id="category" name="category">
+    
+                <button type="button" onclick="saveTeam()">Lưu</button>
+            </form>
+            <ul>
+                <li>
+                    <h3>Tên đội: Đội A</h3>
+                    <img src="../Picture/anh_doi_bong.jpg" alt="Image A">
+                    <p>Mô tả: Mô tả về đội A.</p>
+                    <p>Khu vực hoạt động: Khu vực A</p>
+                    <p>Liên hệ: example@email.com</p>
+                    <p>Thể loại: Thể loại A</p>
+                    <button onclick="editTeam('Đội A')">Chỉnh sửa</button>
+                    <button onclick="deleteTeam('Đội A')">Xóa</button>
+                </li>
+                <li>
+                    <h3>Tên đội: Đội B</h3>
+                    <img src="../Picture/anh_doi_bong1.jpg" alt="Image A">
+                    <p>Mô tả: Mô tả về đội B.</p>
+                    <p>Khu vực hoạt động: Khu vực B</p>
+                    <p>Liên hệ: example@email.com</p>
+                    <p>Thể loại: Thể loại B</p>
+                    <button onclick="editTeam('Đội B')">Chỉnh sửa</button>
+                    <button onclick="deleteTeam('Đội B')">Xóa</button>
+                </li>
+            </ul>
+        </div>
+    </div>    
     <script>
         function editTeam(teamName) {
             alert("Bạn đã chọn chỉnh sửa đội " + teamName);
