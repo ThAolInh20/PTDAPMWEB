@@ -1,0 +1,110 @@
+header{
+    height: 20%;
+    background-color: rgb(0,0,26);
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 6fr 3fr;
+    border-radius: 4px;
+
+}
+body{
+    justify-content: center;
+    background-image: url('../Picture/Screenshot\ 2023-12-25\ 161541.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif; ;
+}
+
+header>div{
+    display:flex;
+    align-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+#logo img{
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+#name{
+    text-align: left;
+}
+#name p{
+    font-size: 20px;
+}
+#log_in_out a{
+    text-decoration: none;
+    color: rgb(150, 178, 202);
+}
+#log_in_out a:hover{
+    color: white;
+}
+body{
+    font-size: 20px;
+}
+
+nav{
+    background-color: rgb(0,0,26);
+    height: 60px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+
+}
+nav #menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+}
+nav #menu li{
+    margin:0px 20px;
+    height: 100%;
+    padding-right: 25px;
+    background-color: rgb(0,0,26);
+    transition: background-color 0.25s ease-in-out;
+    border-right:1px solid white ;
+}
+nav #menu li:hover{
+    background-color: aliceblue;
+}
+nav #menu li a{
+    color: aliceblue;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 30px;
+}
+nav #menu li:hover a{
+    color: black;
+}
+
+#submenu{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: -30px;
+    display:none;
+}
+#menu #submenu li{
+    background-color: aliceblue;
+    margin: 0px;
+    list-style: none;
+    border-top: 1px solid black;
+    transition: background-color 0.25s ease-in-out;
+}
+#menu #submenu li a{
+    color:rgb(0,0,26)  ;
+}
+#menu #submenu li:hover{
+    background-color: black;
+    
+}
+#menu li:hover #submenu{
+    display: block;
+}
+#menu #submenu li:hover a{
+    color: rgb(249, 249, 249);
+ }

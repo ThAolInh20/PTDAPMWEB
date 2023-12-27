@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../TrangChu/style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: none;
+        }
+        .infor .imge img{
+            max-height: 250px;
+        }
+        .nhanxet{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .nguoikhac{
+            border: 1px solid rgb(245, 224, 224);
+        }
+        .banthan{
+            margin-top: 30px;
+            border-top: 1px solid black;
+            height: 30px;
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Picture/image(1280).png" alt="logo">
+        </div>
+        <div id="name">
+            <p>
+                Sport-Time
+            </p>
+            
+        </div>
+        <div id="log_in_out">
+            <a href="trangchu_chua_login.html">Đăng xuất</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="../Timsandau/Timsandau.html">Sân đấu</a>
+                <ul id="submenu">
+                    <li><a href="../Timsandau/Timsandau.html">Tìm sân đấu</a></li>
+                    <li><a href="../Timsandau/sandau_cuatoi.html">Sân đấu đã hẹn lịch</a></li>
+                </ul>
+            </li>
+            <li><a href="">Giải đấu</a>
+                <ul id="submenu">
+                    <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                    <li><a href="../">Quản lý lịch thi đấu</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="../TimKiemDoiGiaoLuu/index.html">Đội giao lưu</a>
+                <ul id="submenu">
+                    <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                    <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
+                </ul></li>
+            <li><a href="">Thông tin của bạn</a>
+                <ul id="submenu">
+                    <li><a href="">Hồ sơ cá nhân</a></li>
+                    <li><a href="">Trao đổi thông tin</a></li>
+                </ul></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="conterner">
+            <div class="infor">
+                <div class="imge">
+                        <img src="../Picture/Anhsanbong/San-tennis.jpg" alt="">
+                        <img src="../Picture/Anhsanbong/tải xuống (1).jpg" alt="">
+                        <img src="../Picture/Anhsanbong/don-vi-thi-cong-san-tennis-chat-luong.jpg" alt="">
+                </div>
+               
+    
+            <div class="chitiet">
+                <table>
+                    <tr>
+                        <td>
+                            Tên sân: Sân Tennis Ngọc Cường
+                        
+                    </tr>
+                    <Tr>
+                        <td>
+                            Chủ sân: Trần Ngọc Cường
+                        </td>
+                        
+                    </Tr>
+                    <tr>
+                        <td>
+                            - SDT: 08595959343
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Địa chỉ: Bắc Từ Liêm Hà Nội
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            Thể loại: Sân Tennis
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Thời gian: 5h-23h
+                        </td>
+                        <td>
+                            Các ngày trong tuần
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="nhanxet">
+            <div class="comments-cell" id="teamComments">
+
+                <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân đẹp</p>
+               <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân chưa nhiều tiện ích</p>
+               <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân không lớn lắm</p>
+               <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân tạm được</p>
+    
+            </div>
+            <div class="banthan">
+                <div class="new-comment">
+                    <textarea id="teamTextarea" placeholder="Viết nhận xét..." onclick="stopPropagation(event)" oninput="handleInput()"></textarea>
+                    <button onclick="addComment()">Gửi</button>
+                </div>
+            </div>
+            <style>
+                comment {
+                    background-color:#a4eca7;
+                    padding: 5px;
+                    margin-bottom: 5px;
+                    border-radius: 3px;
+                }
+                
+                .new-comment {
+                    margin-top: 10px;
+                }
+                
+                .new-comment textarea {
+                    width: calc(100% - 70px);
+                    padding: 5px;
+                    margin-bottom: 5px;
+                }
+                
+                .new-comment button {
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                }
+                
+                
+                .new-comment p { 
+                    padding: 5px;
+                    margin: 0;
+                    border-radius: 3px;
+                }
+                
+            </style>
+            <script>
+                function stopPropagation(event) {
+                    event.stopPropagation();
+                }
+
+                function handleInput() {
+                    console.log('Input detected');
+                }
+
+                function addComment() {
+                    console.log('Button click detected');
+                    updateComments();
+                }
+
+                function updateComments() {
+                    var teamComments = document.getElementById('teamComments');
+                    var teamTextarea = document.getElementById('teamTextarea');
+
+                    var newComment = document.createElement('div');
+                    newComment.className = 'comment';
+                    
+                    var commentParagraph = document.createElement('p');
+                    commentParagraph.textContent = teamTextarea.value;
+
+                    newComment.appendChild(commentParagraph);
+                    teamComments.insertBefore(newComment, teamComments.firstChild); // Chèn lên đầu danh sách
+
+                    commentParagraph.classList.add('new-comment');
+
+                    teamTextarea.value = '';
+                }
+            </script>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

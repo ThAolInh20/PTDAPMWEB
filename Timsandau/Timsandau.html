@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Tìm sân đấu</title>
+    <link rel="stylesheet" href="../TrangChu/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Picture/image(1280).png" alt="logo">
+        </div>
+        <div id="name">
+            <p>
+                Sport-Time
+            </p>
+            
+        </div>
+        <div id="log_in_out">
+            <a href="trangchu_chua_login.html">Đăng xuất</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="../Timsandau/Timsandau.html">Sân đấu</a>
+                <ul id="submenu">
+                    <li><a href="../Timsandau/Timsandau.html">Tìm sân đấu</a></li>
+                    <li><a href="../Timsandau/sandau_cuatoi.html">Sân đấu đã hẹn lịch</a></li>
+                </ul>
+            </li>
+            <li><a href="">Giải đấu</a>
+                <ul id="submenu">
+                    <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                    <li><a href="../">Quản lý lịch thi đấu</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="../TimKiemDoiGiaoLuu/index.html">Đội giao lưu</a>
+                <ul id="submenu">
+                    <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                    <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
+                </ul></li>
+            <li><a href="">Thông tin của bạn</a>
+                <ul id="submenu">
+                    <li><a href="">Hồ sơ cá nhân</a></li>
+                    <li><a href="">Trao đổi thông tin</a></li>
+                </ul></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="conterner">
+            <div class="boloc">
+                <table>
+                    <tr>
+                        <td>
+                            Địa chỉ:
+                            <input type="text" placeholder="Nhập địa chỉ">
+                        </td>
+                        <td>
+                            Môn thể thao:
+                            <select name="" id="thethao">
+                                <option value="">Tất cả</option>
+                                <option value="">Sân bóng đá</option>
+                                <option value="">Sân Golf</option>
+                                <option value="">Sân bóng chuyền</option>
+                                <option value="">Sân Tennis</option>
+                            </select>
+                        </td>
+                        <td>
+                            Giá thành:
+                            <select name="" id="gia">
+                                <option value="">Tất cả</option>
+                                <option value="">Dưới 100k/h</option>
+                                <option value="">Dưới 500k/h</option>
+                                <option value="">Dưới 1000k/h</option>
+                                <option value="">Dưới 5000k/h</option>
+                            </select>
+                        </td>
+                        <td>
+                            Thời gian:
+                            <select name="" id="thoigian">
+                                <option value="">Tất cả</option>
+                                <option value="">5h-23h</option>
+                                <option value="">7h-22h</option>
+                            </select>
+                        </td>
+                        <td>
+                           <button type="button">Tìm kiếm</button>
+                        </td>
+                    </tr>
+                </table>
+           </div>
+           <div class="conterner-infor">
+                <div class="infor">
+                    <img src="../Picture/Anhsanbong/tải xuống.jpg" alt="">
+
+                    <div class="chitiet">
+                        <table>
+                            <tr>
+                                <td>
+                                    Tên sân: Sân Golf
+                                </td>
+                                
+                            </tr>
+                            <Tr>
+                                <td>
+                                    Chủ sân: lê Văn Đào
+                                </td>
+                                <td>
+                                    - SDT: 08595959343
+                                </td>
+                            </Tr>
+                            <tr>
+                                <td colspan="3">
+                                    Địa chỉ: Cầu Giấy Hà Nội
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thể loại: Sân Golf
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thời gian: 5h-23h
+                                </td>
+                                <td>
+                                    Các ngày trong tuần
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" id="hendat" onclick="hendat()">Hẹn đặt sân</button>
+                    <button type="button" ><a href="chitiet_san.html">Nhận xét sân</a></button>
+
+                </div>
+                <div class="infor">
+                    <img src="../Picture/Anhsanbong/anh1.jpg" alt="">
+
+                    <div class="chitiet">
+                        <table>
+                            <tr>
+                                <td>
+                                    Tên sân: Sân văn minh
+                                </td>
+                                
+                            </tr>
+                            <Tr>
+                                <td>
+                                    Chủ sân: Vương Văn hiệp
+                                </td>
+                                <td>
+                                    - SDT: 08595959343
+                                </td>
+                            </Tr>
+                            <tr>
+                                <td colspan="3">
+                                    Địa chỉ: 12 đương láng
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thể loại: Sân bóng
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thời gian: 5h-23h
+                                </td>
+                                <td>
+                                    Các ngày trong tuần
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" id="hendat" onclick="hendat()">Hẹn đặt sân</button>
+                    <button type="button" ><a href="chitiet_san.html">Nhận xét sân</a></button>
+                </div>
+                <div class="infor">
+                   
+                        <img src="../Picture/Anhsanbong/San-tennis.jpg" alt="">
+                    
+                    
+
+                    <div class="chitiet">
+                        <table>
+                            <tr>
+                                <td>
+                                    Tên sân: Sân Tennis Ngọc Cường
+                                
+                            </tr>
+                            <Tr>
+                                <td>
+                                    Chủ sân: Trần Ngọc Cường
+                                </td>
+                                <td>
+                                    - SDT: 08595959343
+                                </td>
+                            </Tr>
+                            <tr>
+                                <td colspan="3">
+                                    Địa chỉ: Bắc Từ Liêm Hà Nội
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thể loại: Sân Tennis
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thời gian: 5h-23h
+                                </td>
+                                <td>
+                                    Các ngày trong tuần
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" id="hendat" onclick="hendat()">Hẹn đặt sân</button>
+                    <button type="button" ><a href="chitiet_san.html">Nhận xét sân</a></button>
+                </div>
+                <div class="infor">
+                    <img src="../Picture/Anhsanbong/anh1.jpg" alt="">
+
+                    <div class="chitiet">
+                        <table>
+                            <tr>
+                                <td>
+                                    Tên sân: Sân văn minh
+                                </td>
+                                
+                            </tr>
+                            <Tr>
+                                <td>
+                                    Chủ sân: Vương Văn hiệp
+                                </td>
+                                <td>
+                                    - SDT: 08595959343
+                                </td>
+                            </Tr>
+                            <tr>
+                                <td colspan="3">
+                                    Địa chỉ: 12 đương láng
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thể loại: Sân bóng
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Thời gian: 5h-23h
+                                </td>
+                                <td>
+                                    Các ngày trong tuần
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" id="hendat" onclick="hendat()">Hẹn đặt sân</button>
+                    <button type="button" ><a href="chitiet_san.html">Nhận xét sân</a></button>
+                </div>
+           </div>
+
+        </div>
+       <script>
+            function  hendat(){
+                alert("Bạn đã hẹn đặt thành công");
+            }
+       </script>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
