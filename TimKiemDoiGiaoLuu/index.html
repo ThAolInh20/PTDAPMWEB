@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #daddce;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
         }
 
         ul {
@@ -15,6 +35,8 @@
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 0;
+            margin: 0;
+            width: 80%;
         }
 
         li {
@@ -42,55 +64,111 @@
             cursor: pointer;
             border-radius: 4px;
         }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg");
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+            /* Full height */
+            height: 100vh;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        form,
+        ul {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .ndung {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: inline-block;
+            /* Make the list inline-block */
+            padding-top: 30px;
+            margin: 0;
+        }
+
+        li {
+            width: 30%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            display: inline-block;
+            margin-right: 10px;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Tìm kiếm đội giao lưu</h1>
-    
-    <form action="/search" method="get">
-        <label for="region">Khu vực:</label>
-        <input type="text" id="region" name="region">
+    <div class="bg-image"></div>
+    <header>
+        <h1>Tìm kiếm đội giao lưu</h1>
+    </header>
+    <div class="ndung">
+        <form action="/search" method="get">
+            <label for="region">Khu vực:</label>
+            <input type="text" id="region" name="region">
 
-        <label for="level">Cấp độ:</label>
-        <input type="text" id="level" name="level">
+            <label for="level">Cấp độ:</label>
+            <input type="text" id="level" name="level">
 
-        <label for="sport">Môn thể thao:</label>
-        <input type="text" id="sport" name="sport">
+            <label for="sport">Môn thể thao:</label>
+            <input type="text" id="sport" name="sport">
 
-        <label for="teamName">Tên đội đấu:</label>
-        <input type="text" id="teamName" name="teamName">
+            <label for="teamName">Tên đội đấu:</label>
+            <input type="text" id="teamName" name="teamName">
 
-        <button type="submit">Tìm kiếm</button>
-    </form>
+            <button type="submit">Tìm kiếm</button>
+        </form>
+        <h2>Kết quả tìm kiếm</h2>
 
-    <h2>Kết quả tìm kiếm</h2>
-    
-    <ul>
-        <li>
-            <h3>Tên đội: Đội A</h3>
-            <p>Cấp độ: Cao</p>
-            <p>Môn thể thao: Bóng đá</p>
-            <p>Số lượng thành viên: 7</p>
-            <p>Thông tin liên hệ: example@email.com</p>
-            <button onclick="contactTeam('Đội A')">Liên hệ</button>
-        </li>
-        <li>
-            <h3>Tên đội: Đội B</h3>
-            <p>Cấp độ: Cao</p>
-            <p>Môn thể thao: Bóng đá</p>
-            <p>Số lượng thành viên: 7</p>
-            <p>Thông tin liên hệ: example@email.com</p>
-            <button onclick="contactTeam('Đội A')">Liên hệ</button>
-        </li>
-        <li>
-            <h3>Tên đội: Đội C</h3>
-            <p>Cấp độ: Cao</p>
-            <p>Môn thể thao: Bóng đá</p>
-            <p>Số lượng thành viên: 7</p>
-            <p>Thông tin liên hệ: example@email.com</p>
-            <button onclick="contactTeam('Đội A')">Liên hệ</button>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <h3>Tên đội: Đội A</h3>
+                <p>Cấp độ: Cao</p>
+                <p>Môn thể thao: Bóng đá</p>
+                <p>Số lượng thành viên: 7</p>
+                <p>Thông tin liên hệ: example@email.com</p>
+                <button onclick="contactTeam('Đội A')">Liên hệ</button>
+            </li>
+            <li>
+                <h3>Tên đội: Đội B</h3>
+                <p>Cấp độ: Cao</p>
+                <p>Môn thể thao: Bóng đá</p>
+                <p>Số lượng thành viên: 7</p>
+                <p>Thông tin liên hệ: example@email.com</p>
+                <button onclick="contactTeam('Đội B')">Liên hệ</button>
+            </li>
+            <li>
+                <h3>Tên đội: Đội C</h3>
+                <p>Cấp độ: Cao</p>
+                <p>Môn thể thao: Bóng đá</p>
+                <p>Số lượng thành viên: 7</p>
+                <p>Thông tin liên hệ: example@email.com</p>
+                <button onclick="contactTeam('Đội C')">Liên hệ</button>
+            </li>
+        </ul>
+    </div>
+
 
     <script>
         function contactTeam(teamName) {
@@ -98,4 +176,5 @@
         }
     </script>
 </body>
+
 </html>
