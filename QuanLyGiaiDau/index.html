@@ -93,11 +93,25 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        #backButton {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
     </style>
     <title>Quản lý lịch thi đấu</title>
 </head>
 <body>
     <header>
+        <button id="backButton" onclick="goBack()">Back</button>
         <h1>Quản lý lịch thi đấu</h1>
     </header>
     <div class="bg-image">
@@ -115,6 +129,9 @@
     </div>
 
     <script>
+        function goBack() {
+            window.history.back();
+        }
         function requestScheduleChange(teamName, date, time) {
             var reason = prompt("Nhập thông tin cần thay đổi cho ngày " + date + " vào lúc " + time + " của đội " + teamName + ":", "");
 

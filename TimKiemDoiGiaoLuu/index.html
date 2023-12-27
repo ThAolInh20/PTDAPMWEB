@@ -115,12 +115,26 @@
             display: inline-block;
             margin-right: 10px;
         }
+        #backButton {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
     <div class="bg-image"></div>
     <header>
+        <button id="backButton" onclick="goBack()">Back</button>
         <h1>Tìm kiếm đội giao lưu</h1>
     </header>
     <div class="ndung">
@@ -171,6 +185,9 @@
 
 
     <script>
+        function goBack() {
+            window.history.back();
+        }
         function contactTeam(teamName) {
             alert("Bạn đã chọn liên hệ với đội " + teamName);
         }
