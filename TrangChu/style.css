@@ -12,6 +12,7 @@ body{
     background-image: url('../Picture/Screenshot\ 2023-12-25\ 161541.png');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Arial, sans-serif; ;
 }
 
 header>div{

@@ -57,15 +57,15 @@
             </li>
             <li><a href="">Giải đấu</a>
                 <ul id="submenu">
-                    <li><a href="">Đăng kí giải đấu</a></li>
-                    <li><a href="">Quản lý lịch thi đấu</a></li>
+                    <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                    <li><a href="../">Quản lý lịch thi đấu</a></li>
                 </ul>
             </li>
             
-            <li><a href="">Đội giao lưu</a>
+            <li><a href="../TimKiemDoiGiaoLuu/index.html">Đội giao lưu</a>
                 <ul id="submenu">
-                    <li><a href="">Tìm đội giao lưu</a></li>
-                    <li><a href="">Quản lý đội giao lưu</a></li>
+                    <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                    <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
                 </ul></li>
             <li><a href="">Thông tin của bạn</a>
                 <ul id="submenu">
@@ -124,29 +124,87 @@
             </div>
         </div>
         <div class="nhanxet">
-            <span style="Font-size:30px">Nhận xét từ người dùng khác:</span>
-            <div class="nguoikhac">
-                <div>Ẩn danh: Sân đẹp rộng rãi thoáng mát</div>
-            </div>
-            <div class="nguoikhac">
-                <div>Linh Thiên: Sân hơi cũ, ít tiện ích</div>
-            </div>
-            <div class="nguoikhac">
-                <div>Anh Hùng: Chưa đầy đủ tiện ích</div>
-            </div><div class="nguoikhac">
-                <div>Hà: Sân còn bé</div>
+            <div class="comments-cell" id="teamComments">
+
+                <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân đẹp</p>
+               <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân chưa nhiều tiện ích</p>
+               <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân không lớn lắm</p>
+               <p style="background-color:#a4eca7; padding: 16px; margin-bottom: 5px; border-radius: 3px;">Sân tạm được</p>
+    
             </div>
             <div class="banthan">
-                <span>
-                    Nhận xét của tôi:
-                </span>
-                
-                    <input type="text" placeholder="nhập nhận xét" style="width:300px; margin-right:150px;margin-left:15px">
-                
-                
-                    <button onclick="nhanxet()">Nhận xét</button>
-                
+                <div class="new-comment">
+                    <textarea id="teamTextarea" placeholder="Viết nhận xét..." onclick="stopPropagation(event)" oninput="handleInput()"></textarea>
+                    <button onclick="addComment()">Gửi</button>
+                </div>
             </div>
+            <style>
+                comment {
+                    background-color:#a4eca7;
+                    padding: 5px;
+                    margin-bottom: 5px;
+                    border-radius: 3px;
+                }
+                
+                .new-comment {
+                    margin-top: 10px;
+                }
+                
+                .new-comment textarea {
+                    width: calc(100% - 70px);
+                    padding: 5px;
+                    margin-bottom: 5px;
+                }
+                
+                .new-comment button {
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                }
+                
+                
+                .new-comment p { 
+                    padding: 5px;
+                    margin: 0;
+                    border-radius: 3px;
+                }
+                
+            </style>
+            <script>
+                function stopPropagation(event) {
+                    event.stopPropagation();
+                }
+
+                function handleInput() {
+                    console.log('Input detected');
+                }
+
+                function addComment() {
+                    console.log('Button click detected');
+                    updateComments();
+                }
+
+                function updateComments() {
+                    var teamComments = document.getElementById('teamComments');
+                    var teamTextarea = document.getElementById('teamTextarea');
+
+                    var newComment = document.createElement('div');
+                    newComment.className = 'comment';
+                    
+                    var commentParagraph = document.createElement('p');
+                    commentParagraph.textContent = teamTextarea.value;
+
+                    newComment.appendChild(commentParagraph);
+                    teamComments.insertBefore(newComment, teamComments.firstChild); // Chèn lên đầu danh sách
+
+                    commentParagraph.classList.add('new-comment');
+
+                    teamTextarea.value = '';
+                }
+            </script>
         </div>
     </section>
     <footer>
