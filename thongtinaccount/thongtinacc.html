@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Tài Khoản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            justify-content: center;
+            background-image: url('../Picture/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif; 
+        }
+
+        h1 {
+            color: #0f0d0d;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .profile-info {
+            flex: 1;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .avt {
+            display: flex; 
+            align-items: center; 
+        }
+
+        #avt {
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 30px; 
+            margin-right: 30px; 
+        }
+
+        .thongtin {
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+        }
+
+        .achievements-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            color:#0b0909;
+        }
+
+        .achievement {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #888;
+        }
+
+        #imgavt {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Thông Tin Tài Khoản</h1>
+
+    <div class="profile-container">
+        <div class="profile-info">
+            <div class="avt">
+                <img id="avt" src="../picture/images (5).jpg">
+                <div class="thongtin">
+                    <h2>Thông Tin Cá Nhân</h2>
+                    <p><strong>Họ và Tên:</strong> Nguyễn Văn A</p>
+                    <p><strong>Email:</strong> admin@gmail.com</p>
+                    <p><strong>Ngày Sinh:</strong> 01/01/1998</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <h2>Các Môn Thể Thao</h2>
+            
+            <p><strong>Môn Thể Thao Yêu Thích:</strong> Bóng Đá</p>
+            
+            <p><strong>Môn Thể Thao Quan Tâm:</strong> Bóng Bàn, Cầu Lông</p>
+        </div>
+    </div>
+
+    <div class="achievements-container">
+        <h2>Các Giải Đạt Được và Danh Hiệu</h2>
+        <div class="achievement">
+            <p><strong>Giải Nhất - Giải Bóng Đá Thành Phố</strong></p>
+            <p>Ngày: 15/05/2015</p>
+        </div>
+
+        <div class="achievement">
+            <p><strong>Danh Hiệu "Người Chơi Xuất Sắc Nhất" - Giải Bóng Bàn Quận XYZ</strong></p>
+            <p>Ngày: 20/08/2018</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 - Thông Tin Tài Khoản</p>
+    </div>
+</body>
+</html>
