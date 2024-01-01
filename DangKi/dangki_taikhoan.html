@@ -16,11 +16,11 @@
                         <label for="username">Tên đăng nhập</label><br>
                         <input type="text" placeholder="Tên đăng nhâp..." id="username"><br>
                         <label for="email">Email khôi phục</label><br>
-                        <input type="text" placeholder="Email..." onchange="checkemail()" id="email"><br>
+                        <input type="text" placeholder="Mật khẩu..." onchange="checkemail()" id="email"><br>
                         <label for="password">Mật khẩu</label><br>
                         <input type="password" placeholder="Mật khẩu..." id="password1"><br>
                         <label for="password" onclick="checkpass()">Xác nhận mật khẩu</label><br>
-                        <input type="password" placeholder="Xác nhận mật khẩu..." id="password2"><br>
+                        <input type="password" placeholder="Mật khẩu..." id="password2"><br>
                     </td>
                 </tr>
                 <tr >
@@ -31,11 +31,35 @@
                 </tr>
             </table>
            
-            <script src="../Login/data.js"></script>
-            <script src="dangki.js"></script>
+            <script>
                
-                
+                function checkemail(){
+                    var email = document.getElementById("email").value;
+                    var regix= /^[^@]*@[^@.]+\.[^@.]+$/;
         
+                    if(!regix.test(email)){
+                        alert("Vui lòng nhập đúng email");
+                    }
+                }
+                function registerAndRedirect() {
+                
+                        if (document.getElementById('password1').value != document.getElementById('password2').value) {
+                            alert("Mật khẩu chưa trùng khớp!")
+                          }
+                          else{
+                              // Hiển thị thông báo thành công
+                              alert("Đăng ký thành công!");
+                         
+                              // Chờ 2 giây để người dùng thấy thông báo, sau đó chuyển hướng
+                              setTimeout(function() {
+                                  window.location.href = "../Login/index.html";
+                              }, 1000);
+                          }
+                    
+                  // Thực hiện các bước đăng ký tại đây
+                  
+                }
+              </script>
         </form>
     </div>
 </body>

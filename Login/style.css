@@ -1,0 +1,44 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url('../Picture/Screenshot\ 2023-12-25\ 161541.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#dangnhap{
+    width: 300px;
+    margin-top: 50px;
+    border: 1px solid black;
+    background-color:aliceblue ;
+    
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+form{
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+form > table{
+    width: 70%;
+
+}
+#btnlogin a{
+    text-decoration: none;
+}
+input{
+    width: 100%;
+}
+#dangki{
+    display: inline-flex;
+}
+form #btnlogin button{ 
+    align-items: center;
+}

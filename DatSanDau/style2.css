@@ -1,0 +1,133 @@
+form {
+    flex-basis: 50%;
+}
+*button{
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+}
+#booked{
+    /* border: 1px solid red; */
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    max-height: 310px;
+}
+#booked a img {
+    max-width: 70%;
+    display: block;
+    max-height: 80%;
+}
+#booked p{
+    margin: 0px;
+    color: lightcyan;
+}
+#booked #title1{
+    color: red;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#booked .infor-title{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+#booked .infor-title span{
+    color: darkred;
+}
+form #Tensan{
+    width: 300px;
+    height: 40px;
+}
+form select{
+    height: 40px;
+    width: 200px;
+}
+form *{
+    /* display: block; */
+    margin-bottom: 10px;
+}
+form #submit{
+    width: 100px;
+    height: 30px;
+    background: rgb(219, 162, 56);
+    border: none;
+    color: rgb(226, 26, 26);
+    font-size: medium;
+    font-weight: bold;
+}
+form label{
+    color: gold;
+}
+#content {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+ul#list-stadium{
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+li#item a img {
+    width: 100%;
+    height: 50%;
+}
+li #title {
+    color: rgb(134, 194, 37);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+li#item #infor{
+    font-size: 16px;
+}
+li#item #infor .infor-title {
+    color: rgb(64, 184, 35);
+    margin: 5px;
+    cursor: pointer;
+}
+li#item #infor .infor-title span{
+    color: rgb(226, 68, 20);
+}
+li#item{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-basis: 23%;
+    margin-bottom: 20px ;
+}
+li#item #action{
+    display: flex;
+    justify-content: space-around;
+}
+li#item button{
+    background: orange;
+    border: none;
+    padding: 10px 20px;
+    color: blue;
+    font-size: large;
+}
+li#item  button:hover{
+    background-color: orangered;
+    color: aquamarine;
+}
+li#item {
+    position: relative;
+}
+li#item  #contact:hover p#number{
+    display: block;
+}
+li#item  p#number{
+   position: absolute;
+   bottom: 30px;
+   right: 10px;
+   font-size: medium;
+   background: rgb(223, 126, 37);
+    display: none;
+    padding:  10px 20px;
+}
+

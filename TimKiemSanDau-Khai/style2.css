@@ -1,0 +1,64 @@
+form {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+form #Tensan{
+    width: 300px;
+    height: 40px;
+}
+form select{
+    height: 40px;
+    width: 200px;
+}
+form *{
+    /* display: block; */
+    margin-bottom: 10px;
+}
+form #submit{
+    width: 100px;
+    height: 30px;
+}
+form #checkbox label {
+    font-size: 15px;
+}
+form label{
+    color: gold;
+}
+#content {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+ul#list-stadium{
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+li#item a img {
+    width: 100%;
+    height: 50%;
+}
+li #title {
+    color: rgb(134, 194, 37);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+li#item #infor{
+    font-size: 16px;
+}
+li#item #infor .infor-title {
+    color: aqua;
+    margin: 5px;
+    cursor: pointer;
+}
+li#item #infor .infor-title span{
+    color: rgb(204, 118, 20);
+}
+li#item{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-basis: 23%;
+    margin-bottom: 20px ;
+}
+

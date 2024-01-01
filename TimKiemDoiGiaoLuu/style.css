@@ -1,0 +1,236 @@
+ header {
+  height: 20%;
+  background-color: rgb(0, 0, 26);
+  color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr;
+  border-radius: 4px;
+}
+ body {
+  justify-content: center;
+  background-image: url("../Picture/Screenshot\ 2023-12-25\ 161541.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#NamUI header > div {
+  display: flex;
+  align-content: space-around;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+#NamUI #logo img {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+}
+#NamUI #name {
+  text-align: left;
+}
+#NamUI #name p {
+  font-size: 20px;
+}
+#NamUI #log_in_out a {
+  text-decoration: none;
+  color: rgb(150, 178, 202);
+}
+#NamUI #log_in_out a:hover {
+  color: white;
+}
+#NamUI body {
+  font-size: 20px;
+}
+
+#NamUI nav {
+  background-color: rgb(0, 0, 26);
+  height: 60px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+#NamUI nav #menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+}
+#NamUI nav #menu li {
+  margin: 0px 20px;
+  height: 100%;
+  padding-right: 25px;
+  background-color: rgb(0, 0, 26);
+  transition: background-color 0.25s ease-in-out;
+  border-right: 1px solid white;
+}
+#NamUI nav #menu li:hover {
+  background-color: aliceblue;
+}
+#NamUI nav #menu li a {
+  color: aliceblue;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 30px;
+}
+#NamUI nav #menu li:hover a {
+  color: black;
+}
+
+#NamUI #submenu {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: -30px;
+  display: none;
+}
+#NamUI #menu #submenu li {
+  background-color: aliceblue;
+  margin: 0px;
+  list-style: none;
+  border-top: 1px solid black;
+  transition: background-color 0.25s ease-in-out;
+}
+#NamUI #menu #submenu li a {
+  color: rgb(0, 0, 26);
+}
+#NamUI #menu #submenu li:hover {
+  background-color: black;
+}
+#NamUI #menu li:hover #submenu {
+  display: block;
+}
+#NamUI #menu #submenu li:hover a {
+  color: rgb(249, 249, 249);
+}
+
+#PhuongUI body {
+  font-family: Arial, sans-serif;
+  background-color: #daddce;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#PhuongUI header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+
+}
+
+#PhuongUI h1 {
+  text-align: center;
+  color: white;
+}
+
+#PhuongUI ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+#PhuongUI li {
+  width: 30%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#PhuongUI h3 {
+  margin-top: 0;
+}
+
+#PhuongUI button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#PhuongUI .bg-image {
+  /* The image used */
+  background-image: url("../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+#PhuongUI form 
+ul {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+#PhuongUI .ndung {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+#PhuongUI ul {
+  list-style-type: none;
+  display: inline-block;
+  /* Make the list inline-block */
+  padding-top: 30px;
+  margin: 0;
+}
+
+#PhuongUI li {
+  width: 30%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#PhuongUI ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+#PhuongUI ul li img {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#PhuongUI ul li:hover img {
+    display: block;
+}

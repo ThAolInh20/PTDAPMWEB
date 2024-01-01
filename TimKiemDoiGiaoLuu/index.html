@@ -5,170 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tìm kiếm đội giao lưu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #daddce;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-        }
-
-        ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 0;
-            margin: 0;
-            width: 80%;
-        }
-
-        li {
-            width: 30%;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        h3 {
-            margin-top: 0;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .bg-image {
-            /* The image used */
-            background-image: url("../Picture/360_F_278427683_zeS9ihPAO61QhHqdU1fOaPk2UClfgPcW.jpg");
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
-
-            /* Full height */
-            height: 100vh;
-
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            width: 100%;
-            z-index: -1;
-        }
-
-        form,
-        ul {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .ndung {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            display: inline-block;
-            /* Make the list inline-block */
-            padding-top: 30px;
-            margin: 0;
-        }
-
-        li {
-            width: 30%;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-sizing: border-box;
-            display: inline-block;
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="bg-image"></div>
-    <header>
-        <h1>Tìm kiếm đội giao lưu</h1>
-    </header>
-    <div class="ndung">
-        <form action="/search" method="get">
-            <label for="region">Khu vực:</label>
-            <input type="text" id="region" name="region">
-
-            <label for="level">Cấp độ:</label>
-            <input type="text" id="level" name="level">
-
-            <label for="sport">Môn thể thao:</label>
-            <input type="text" id="sport" name="sport">
-
-            <label for="teamName">Tên đội đấu:</label>
-            <input type="text" id="teamName" name="teamName">
-
-            <button type="submit">Tìm kiếm</button>
-        </form>
-        <h2>Kết quả tìm kiếm</h2>
-
-        <ul>
-            <li>
-                <h3>Tên đội: Đội A</h3>
-                <p>Cấp độ: Cao</p>
-                <p>Môn thể thao: Bóng đá</p>
-                <p>Số lượng thành viên: 7</p>
-                <p>Thông tin liên hệ: example@email.com</p>
-                <button onclick="contactTeam('Đội A')">Liên hệ</button>
-            </li>
-            <li>
-                <h3>Tên đội: Đội B</h3>
-                <p>Cấp độ: Cao</p>
-                <p>Môn thể thao: Bóng đá</p>
-                <p>Số lượng thành viên: 7</p>
-                <p>Thông tin liên hệ: example@email.com</p>
-                <button onclick="contactTeam('Đội B')">Liên hệ</button>
-            </li>
-            <li>
-                <h3>Tên đội: Đội C</h3>
-                <p>Cấp độ: Cao</p>
-                <p>Môn thể thao: Bóng đá</p>
-                <p>Số lượng thành viên: 7</p>
-                <p>Thông tin liên hệ: example@email.com</p>
-                <button onclick="contactTeam('Đội C')">Liên hệ</button>
-            </li>
-        </ul>
+    <div id="NamUI">
+        <header>
+            <div id="logo">
+                <img src="../Picture/image(1280).png" alt="logo">
+            </div>
+            <div id="name">
+                <p>
+                    Sport-Time
+                </p>
+            </div>
+            <div id="log_in_out">
+                <a href="../TrangChu/trangchu_chua_login.html">Đăng xuất</a>
+            </div>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li><a href="../TrangChu/trangchu_login.html">Trang chủ</a></li>
+                <li><a href="../DatSanDau/DatSanDau.html">Sân đấu</a>
+                    <ul id="submenu">
+                        <li><a href="../DatSanDau/DatSanDau.html">Tìm sân đấu</a></li>
+                        <li><a href="../Timsandau/sandau_cuatoi.html">Sân đấu đã hẹn lịch</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Giải đấu</a>
+                    <ul id="submenu">
+                        <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                        <li><a href="../QuanLyGiaiDau/index.html">Quản lý lịch thi đấu</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="../TimKiemDoiGiaoLuu/index.html">Đội giao lưu</a>
+                    <ul id="submenu">
+                        <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                        <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
+                    </ul></li>
+                <li><a href="">Thông tin của bạn</a>
+                    <ul id="submenu">
+                        <li><a href="">Hồ sơ cá nhân</a></li>
+                        <li><a href="">Trao đổi thông tin</a></li>
+                    </ul></li>
+            </ul>
+        </nav>
     </div>
+    <div id="PhuongUI">
+        <div class="bg-image"></div>
+        <header>
+            <h1> Tìm kiếm đội giao lưu</h1>
+        </header>
+        <div class="ndung">
+            <form action="/search" method="get">
+                <label for="region">Khu vực:</label>
+                <input type="text" id="region" name="region">
 
+                <label for="level">Cấp độ:</label>
+                <input type="text" id="level" name="level">
+
+                <label for="sport">Môn thể thao:</label>
+                <input type="text" id="sport" name="sport">
+
+                <label for="teamName">Tên đội đấu:</label>
+                <input type="text" id="teamName" name="teamName">
+
+                <button type="submit">Tìm kiếm</button>
+            </form>
+            <h2>Kết quả tìm kiếm</h2>
+
+            <ul>
+                <li>
+                    <h3>Tên đội: Đội A</h3>
+                    <img src="../Picture/anh_doi_bong.jpg" alt="Image A">
+                    <p>Cấp độ: Cao</p>
+                    <p>Môn thể thao: Bóng đá</p>
+                    <p>Số lượng thành viên: 7</p>
+                    <p>Thông tin liên hệ: example@email.com</p>
+                    <button onclick="contactTeam('Đội A')">Liên hệ</button>
+                </li>
+                <li>
+                    <h3>Tên đội: Đội B</h3>
+                    <img src="../Picture/anh_doi_bong1.jpg" alt="Image B">
+                    <p>Cấp độ: Cao</p>
+                    <p>Môn thể thao: Bóng đá</p>
+                    <p>Số lượng thành viên: 7</p>
+                    <p>Thông tin liên hệ: example@email.com</p>
+                    <button onclick="contactTeam('Đội B')">Liên hệ</button>
+                </li>
+                <li>
+                    <h3>Tên đội: Đội C</h3>
+                    <img src="../Picture/anh_doi_bong2.jpg" alt="Image C">
+                    <p>Cấp độ: Cao</p>
+                    <p>Môn thể thao: Bóng đá</p>
+                    <p>Số lượng thành viên: 7</p>
+                    <p>Thông tin liên hệ: example@email.com</p>
+                    <button onclick="contactTeam('Đội C')">Liên hệ</button>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script>
         function contactTeam(teamName) {
