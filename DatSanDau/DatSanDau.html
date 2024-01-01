@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../TrangChu/style.css">
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Picture/image(1280).png" alt="logo">
+        </div>
+        <div id="name">
+            <p>
+                Sport-Time
+            </p>
+            
+        </div>
+        <div id="log_in_out">
+            <a href="../TrangChu/trangchu_chua_login.html">Đăng xuất</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="../TrangChu/trangchu_login.html">Trang chủ</a></li>
+            <li><a href="../DatSanDau/DatSanDau.html">Sân đấu</a>
+                <ul id="submenu">
+                    <li><a href="../DatSanDau/DatSanDau.html">Tìm sân đấu</a></li>
+                    <li><a href="../Timsandau/sandau_cuatoi.html">Sân đấu đã hẹn lịch</a></li>
+                </ul>
+            </li>
+            <li><a href="">Giải đấu</a>
+                <ul id="submenu">
+                    <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                    <li><a href="../QuanLyGiaiDau/index.html">Quản lý lịch thi đấu</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="../TimKiemDoiGiaoLuu/index.html">Đội giao lưu</a>
+                <ul id="submenu">
+                    <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                    <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
+                </ul></li>
+            <li><a href="">Thông tin của bạn</a>
+                <ul id="submenu">
+                    <li><a href="">Hồ sơ cá nhân</a></li>
+                    <li><a href="">Trao đổi thông tin</a></li>
+                </ul></li>
+        </ul>
+    </nav>
+    <div class="container">
+       
+        <form action="" id="DatSan">
+            <fieldset>
+                <legend style="color: red;">Đặt sân đấu</legend> <br>
+                <label for="name">Tên Đội</label> <br>
+                <input id="TenDoi" type="text" placeholder="Nhập tên đội" value="Chelsea"> <br>
+                <label for="address">Ngày Đặt</label> <br>
+                <input type="date" id="ngaydat" name="" > <br>
+                <label for="">Thời gian</label> <br>
+                <input type="time" name="" id="thoigian"> <br> <br>
+                <input type="submit" value="Đặt sân" id="submit">
+            </fieldset>
+        </form> 
+       
+        <div id="booked">
+                <!-- <div id="title1">Sân đã chọn: Sân Mỹ Đình</div>
+                <a href=""><img src="img/std1.png" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 8300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Trạng Thái: <span>Còn trống</span></div>
+                </div> -->
+        </div>
+    </div>
+    
+
+    <div class="" id="content">
+         <h1 style="color: chartreuse;" id="title">Danh sách sân đấu</h1> 
+        <ul id="list-stadium">
+              <li id="item">
+                <div id="title"> Sân Mỹ Đình</div>
+                <a href=""><img src="../Picture/Anhsanbong/anh2.jpg" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>300 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 6300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Trạng Thái: <span>Còn trống</span></div>
+                </div>
+            
+                    <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                
+            </li>
+            <li id="item">
+                <div id="title">Sân Hoài Đức</div>
+                <a href=""><img src="../Picture/Anhsanbong/don-vi-thi-cong-san-tennis-chat-luong.jpg" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>100 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Trạng Thái: <span>Đã có người đặt</span></div>
+                </div>
+                <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Thành Đô</div>
+                    <a href=""><img src="img/san8.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>900 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Trạng Thái: <span>Còn trống</span></div>
+                    </div>
+                    <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Tân Lập</div>
+                    <a href=""><img src="../Picture/Anhsanbong/tải xuống (1).jpg" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>600 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Trạng Thái: <span>Đã có người đặt</span></div>
+                    </div>
+                    <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Nam Từ Liêm</div>
+                    <a href=""><img src="../Picture/Anhsanbong/San-tennis.jpg" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>700 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 3010000/1h</span> </div>
+                        <div  class="infor-title" id="number">Trạng Thái: <span>Đã có người đặt</span></div>
+                    </div>
+                    <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Minh Khai</div>
+                    <a href=""><img src="img/san5.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 1300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Trạng Thái: <span>Còn trống</span></div>
+                    </div>
+                    <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Hoàng Mai</div>
+                    <a href=""><img src="../Picture/anh_doi_bong1.jpg" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Trạng Thái: <span>Đã có người đặt</span></div>
+                    </div>
+                    <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+                </li>
+            </li>
+            <li id="item">
+                <div id="title">Sân Công Nghiệp</div>
+                <a href=""><img src="img/san7.png" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Trạng Thái: <span>Còn trống</span></div>
+                </div>
+                <button id="booking">Đặt sân</button>
+                    <button id="contact">Liên Hệ
+                        <p id="number">
+                            Chủ sân: Phạm Thành Long <br>
+                            Số điện thoại: 0977886115</p>
+                    </button>
+                    <button type="button" ><a href="../Timsandau/chitiet_san.html">Nhận xét sân</a></button>
+            </li>  
+           
+        </ul>
+    </div>
+       
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../TrangChu/style.css">
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Picture/image(1280).png" alt="logo">
+        </div>
+        <div id="name">
+            <p>
+                Sport-Time
+            </p>
+            
+        </div>
+        <div id="log_in_out">
+            <a href="../TrangChu/trangchu_chua_login.html">Đăng xuất</a>
+        </div>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="../TrangChu/trangchu_login.html">Trang chủ</a></li>
+            <li><a href="../DatSanDau/DatSanDau.html">Sân đấu</a>
+                <ul id="submenu">
+                    <li><a href="../DatSanDau/DatSanDau.html">Tìm sân đấu</a></li>
+                    <li><a href="../Timsandau/sandau_cuatoi.html">Sân đấu đã hẹn lịch</a></li>
+                </ul>
+            </li>
+            <li><a href="">Giải đấu</a>
+                <ul id="submenu">
+                    <li><a href="../DangKyThamGiaGiaiDau/index.html">Đăng kí giải đấu</a></li>
+                    <li><a href="../QuanLyGiaiDau/index.html">Quản lý lịch thi đấu</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="../TimKiemDoiGiaoLuu/index.html">Đội giao lưu</a>
+                <ul id="submenu">
+                    <li><a href="../TimKiemDoiGiaoLuu/index.html">Tìm đội giao lưu</a></li>
+                    <li><a href="../QuanLyDoiGiaoLuu/index.html">Quản lý đội giao lưu</a></li>
+                </ul></li>
+            <li><a href="">Thông tin của bạn</a>
+                <ul id="submenu">
+                    <li><a href="">Hồ sơ cá nhân</a></li>
+                    <li><a href="">Trao đổi thông tin</a></li>
+                </ul></li>
+        </ul>
+    </nav>
+    <form action="" id="formSearch">
+        <fieldset>
+            <legend style="color: red;">Tìm kiếm sân đấu</legend> <br>
+            <label for="name">Tên Sân đấu</label> <br>
+            <input id="Tensan" type="text" placeholder="Nhập sân cần tìm"> <br>
+            <label for="address">Địa chỉ</label> <br>
+            <select name="" id="">
+                <option value="">Hà Nội</option>
+                <option value="">TP Hồ Chí Minh</option>
+                <option value="">Đà Nẵng</option>
+                <option value=""></option>
+            </select> <br>
+            <label for="quanHuyen">Quận Huyện</label> <br>
+            <select  name="" id=""> 
+                <option value="">Đống Đa</option>
+                <option value="">Thanh Xuân</option>
+                <option value="">Nam Từ Liêm</option>
+            </select> <br>
+            <label for="">Tiêu chí:</label> <br>
+            <div id="radioBox"> <br>
+                <input type="radio" name="type">
+                <label for="">Cỏ tự nhiên</label>
+                <input type="radio" name="type">
+                <label for="">Cỏ nhân tạo</label>
+                <input type="checkbox" name="" id="">
+                <label for="">Sân đất</label>
+                <input type="checkbox" name="" id="">
+                <label for="">Sân trong nhà</label>
+            </div> <br>
+            <label for="">Giá cả:</label>
+            <select name="" id="">
+                <option value="">100000/1h</option>
+                <option value="">200000/1h</option>
+                <option value="">300000/1h</option>
+                <option value="">400000/1h</option>
+                <option value="">500000/1h</option>
+                <option value="">600000/1h</option>
+            </select> <br>
+            <input style="background-color: orangered; border: none; width: 150px;" type="submit" value="Tìm Kiếm" id="submit">
+           
+        </fieldset>
+    </form>
+    <div class="" id="content">
+         <h1 style="color: chartreuse;" id="title"></h1> 
+        <ul id="list-stadium">
+             <!-- <li id="item">
+                <div id="title"> Sân Mỹ Đình</div>
+                <a href=""><img src="img/std1.png" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                </div>
+            </li>
+            <li id="item">
+                <div id="title">Sân Hoài Đức</div>
+                <a href=""><img src="img/san2.png" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                </div>
+                <li id="item">
+                    <div id="title">Sân Thành Đô</div>
+                    <a href=""><img src="img/san2.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                    </div>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Tân Lập</div>
+                    <a href=""><img src="img/san3.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                    </div>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Nam Từ Liêm</div>
+                    <a href=""><img src="img/san4.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                    </div>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Minh Khai</div>
+                    <a href=""><img src="img/san5.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                    </div>
+                </li>
+                <li id="item">
+                    <div id="title">Sân Hoàng Mai</div>
+                    <a href=""><img src="img/san6.png" alt=""></a>
+                    <div id="infor">
+                        <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                        <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                        <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                        <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                    </div>
+                </li>
+            </li>
+            <li id="item">
+                <div id="title">Sân Công Nghiệp</div>
+                <a href=""><img src="img/san7.png" alt=""></a>
+                <div id="infor">
+                    <div  class="infor-title" id="kichThuoc">Kích thước: <span>500 mét vuông</span></div>
+                    <div  class="infor-title" id="tiennghi">Tiêu chuẩn:<span>Tiêu chuẩn quốc tế</span></div>
+                    <div  class="infor-title" id="price">Giá:<span> 300000/1h</span> </div>
+                    <div  class="infor-title" id="number">Số Điện Thoại: <span>0337517142</span></div>
+                </div>
+            </li>  -->
+        </ul>
+    </div>
+    <footer>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
